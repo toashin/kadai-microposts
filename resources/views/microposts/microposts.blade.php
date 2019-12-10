@@ -11,9 +11,10 @@
                 </div>
                 <div>
                     @if (Auth::id() == $micropost->user_id)
-                        {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' = > 'delete']) !!}
+                        {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                         {!! Form::close() !!}
+                    @endif    
                 </div>
             </div>
         </li>
